@@ -27,6 +27,7 @@ while True:
     
 # note that the whole json response is printed here
 # actually it showed up that I am returning a \n newline I don't want...
+# Now corrected in mangorep (line 88 ish)
 
     time.sleep(2)
 
