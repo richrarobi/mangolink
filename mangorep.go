@@ -85,7 +85,7 @@ func adds ( args... string ) ( res string) {
 func cpuTemp()(res string) {
     var x string
     if strings.Contains( sysType(), "ARM" ) {
-        x = exeCmd( "/opt/vc/bin/vcgencmd", "measure_temp")
+        x = strings.TrimSpace(exeCmd( "/opt/vc/bin/vcgencmd", "measure_temp"))
     } else {
         x = "cpuTemp: SysType Not ARM"
     }
