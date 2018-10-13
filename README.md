@@ -15,4 +15,6 @@ will show the same random LED's at (virtually) the same time.
 
 see func clrAllPix and setPix in mangorep, and the calling code in func main in mangoreq....note the calls in the case statement.
 
+Python example added in examples to call mangorep .
+
 RichR
