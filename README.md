@@ -1,13 +1,15 @@
 # mangolink
 request / reply with nanomsg / mangos
 
+
 Two examples that work together:- mreply_a.go and mreq.go. mreq line 90 ... calls mreply on system a, 
 this controls the Pimoroni pantilt hat on the remote system......
+Next I plan to write a Go based gui, so I can control the pantilt heads with buttons.
+
 
 mangorep has functions to be used by mangoreq.
 I run mangorep on startup on Raspberry Pi. It will also work on a Linux PC.
 Currently mangorep has some example functions. 
-
 
 Added in the examples directory.. mangorep_pi.go and mangoreq.go
 
