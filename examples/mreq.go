@@ -116,7 +116,7 @@ func main() {
     
 //    fmt.Println("from f: ",request("tcp://f.local:5555", "pthome"))
 //    go request("tcp://d.local:5555", "clrAllPix")
-//    go request("tcp://c.local:5555", "clrAllPix")
+    go request("tcp://c.local:5555", "clrAllPix")
     fmt.Println("Stopping")
     
 // need to wait for completion of go routines
