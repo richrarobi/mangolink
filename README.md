@@ -2,9 +2,15 @@
 request / reply with nanomsg / mangos
 
 
+
 Two examples that work together:- mreply_a.go and mreq.go. mreq line 90 ... calls mreply on system a, 
 this controls the Pimoroni pantilt hat on the remote system......
+Also in the example, the Pimoroni Blinkt led's are being driven remotely..
+see the line:-  go request("tcp://c.local:5555", "setPix", p, r, g, b, l )
+
+
 Next I plan to write a Go based gui, so I can control the pantilt heads with buttons.
+
 
 
 mangorep has functions to be used by mangoreq.
