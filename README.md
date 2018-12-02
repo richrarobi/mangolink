@@ -32,4 +32,5 @@ Python example added in examples to call mangorep .
 
 RichR
 
-p.s. the timeout value of 3 seconds is a bit too short, especially when mechanical doo-hickies like servos are involved. I have increased it to 10 in my system.
+p.s. the request (mreq.go) timeout value of 3 seconds is a bit too short, especially when mechanical doo-hickies like servos are
+involved. I have increased it to 10 in my system.
