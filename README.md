@@ -31,3 +31,5 @@ see func clrAllPix and setPix in mangorep, and the calling code in func main in 
 Python example added in examples to call mangorep .
 
 RichR
+
+p.s. the timeout value of 3 seconds is a bit too short, especially when mechanical doo-hickies like servos are involved. I have increased it to 10 in my system.
