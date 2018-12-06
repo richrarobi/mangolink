@@ -1,9 +1,10 @@
 # mangolink
 request / reply with nanomsg / mangos
 
-NEW EXAMPLE:- mreply_a.go and mreqgui.go work together. On Raspi system a.local I have mreply_a.go running (from startup)
-So... I run a web browser on another system, call up the picamera page on a.local. Then using the Gui, mreqgui.go, I can move the pantilt hat down, up, left, right and to centre. See the picture...
-
+NEW EXAMPLE:- In examples, mreply_a.go and mreqgui.go work together.
+On Raspi system a.local I have mreply_a.go running (from startup).
+So... I run a web browser on another system, call up the picamera page on a.local. Then using the Gui, mreqgui.go on the
+second system (or anywhere else!), I can move the pantilt hat down, up, left, right and to centre. See the picture...
 
 
 Two examples that work together:- mreply_a.go and mreq.go. mreq line 90 ... calls mreply on system a, 
