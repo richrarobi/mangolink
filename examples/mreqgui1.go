@@ -21,7 +21,7 @@ type Reqst struct {
 
 var mainwin *ui.Window
 
-func panTiltA() ui.Control {
+func makeDataChoosersPage() ui.Control {
     hbox := ui.NewHorizontalBox()
     hbox.SetPadded(true)
 
@@ -71,56 +71,6 @@ func panTiltA() ui.Control {
     return hbox
 }
 
-func panTiltF() ui.Control {
-    hbox := ui.NewHorizontalBox()
-    hbox.SetPadded(true)
-
-    vbox := ui.NewVerticalBox()
-    vbox.SetPadded(true)
-    hbox.Append(vbox, true)
-
-    grid := ui.NewGrid()
-    grid.SetPadded(true)
-    vbox.Append(grid, false)
-
-    button := ui.NewButton("Up")
-    button.OnClicked(func(*ui.Button) {
-        request("tcp://f.local:5555", "ptDelta", "tilt", -5)
-    })
-    grid.Append(button, 1, 0, 1, 1, false, ui.AlignFill, false, ui.AlignFill)
-
-    button = ui.NewButton("Left")
-    button.OnClicked(func(*ui.Button) {
-        request("tcp://f.local:5555", "ptDelta", "pan", 5)
-    })
-    grid.Append(button, 0, 1, 1, 1, false, ui.AlignFill, false, ui.AlignFill)
-        
-    button = ui.NewButton("Home")
-    button.OnClicked(func(*ui.Button) {
-        request("tcp://f.local:5555", "ptGo", -25, 20)
-    })
-    grid.Append(button, 1, 1, 1, 1, false, ui.AlignFill, false, ui.AlignFill)
-      
-        
-    button = ui.NewButton("Right")
-    button.OnClicked(func(*ui.Button) {
-        request("tcp://f.local:5555", "ptDelta", "pan", -5)
-    })
-    grid.Append(button, 2, 1, 1, 1, false, ui.AlignFill, false, ui.AlignFill)
-
-    button = ui.NewButton("Down")
-    button.OnClicked(func(*ui.Button) {
-        request("tcp://f.local:5555", "ptDelta", "tilt", 5)
-    })
-    grid.Append(button, 1, 2, 1, 1, false, ui.AlignFill, false, ui.AlignFill)
-
-    button = ui.NewButton("Exit")
-    button.OnClicked(func(*ui.Button) { ui.Quit() })
-    grid.Append(button, 1,4, 1, 1, false, ui.AlignFill, false, ui.AlignFill)
-
-    return hbox
-}
-
 func setupUI() {
     mainwin = ui.NewWindow("PanTilt Control", 240, 200, true)
     mainwin.OnClosing(func(*ui.Window) bool {
@@ -137,14 +87,8 @@ func setupUI() {
     mainwin.SetChild(tab)
     mainwin.SetMargined(true)
 
-    tab.Append("a.local PanTilt", panTiltA())
+    tab.Append("Buttons", makeDataChoosersPage())
     tab.SetMargined(0, true)
-//
-    mainwin.SetChild(tab)
-    mainwin.SetMargined(true)
-
-    tab.Append("f.local PanTilt", panTiltF())
-    tab.SetMargined(1, true)
 
     mainwin.Show()
 }
