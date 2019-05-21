@@ -39,3 +39,17 @@ RichR
 
 p.s. the request (mreq.go) timeout value of 3 seconds is a bit too short, especially when mechanical doo-hickies like servos are
 involved. I have increased it to 10 in my system.
+
+p.p.s I was probably remiss on not giving install info, this should help a bit ... :-
+Linux first
+
+   20  sudo apt install git
+
+   26  go get nanomsg.org/go/mangos/v2
+   27  go get github.com/richrarobi/mangolink
+
+   31  go get github.com/andlabs/ui
+   32  sudo apt install libgtk-3-dev
+
+
+
